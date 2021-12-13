@@ -1,7 +1,7 @@
-let addMessage = document.querySelector(".message")
-let addButton = document.querySelector(".add")
-let todo = document.querySelector(".todo")
-let todoList = []
+const addMessage = document.querySelector(".message")
+const addButton = document.querySelector(".add")
+const todo = document.querySelector(".todo")
+const todoList = []
 
 addButton.addEventListener("click", function () {
     displayMessages()
@@ -29,11 +29,8 @@ function displayMessages() {
     cheak.type = "checkbox"
     cheak.id = "none"
     cheak.className = "superItem"
-    // cheak.style.outline = "grey solid 1px"
-    // cheak.style.border = "none"
     divkek.append(cheak)
     cheak.addEventListener("click", changeColor)
-
 
     function changeColor() {
         const box = event.target
