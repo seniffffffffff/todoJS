@@ -1,0 +1,202 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.todo_list{
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 15px 0 40px 0;
+    border-radius: 5px;
+
+}
+.wrapper{
+    background: white;
+    text-align: start;
+}
+button{
+    background: #79ada2;
+    border: none;
+    color: white;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 8px 8px 8px 8px;
+}
+.create_new_todo{
+    border:1px solid #d2c8bd;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 15px;
+}
+.message{
+    margin: 5px 5px 5px 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+.message:focus{
+    border-color: white;
+}
+input[type="radio"]:after{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    outline: none;
+    outline-offset: 0px;
+}
+input[type="radio"]:checked:after{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    outline-offset: 1px;
+    outline:red solid 1px;
+}
+input[type="radio"]:before{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    outline-offset: 1px;
+    outline:red solid 0px;
+}
+input[id="blue"]:after{
+    background: blue;
+}
+input[id="\#ffa400"]:after{
+    background: #ffa400;
+}
+input[id="green"]:after{
+    background: green;
+}
+input[id="red"]:after{
+    background: red;
+}
+input[id="\#00d669"]:after{
+    background: #00d669;
+}
+input[id="\#530cff"]:after{
+    background: #530cff;
+}
+.divinline{
+    display: flex;
+    align-items: center;
+    margin: 0 0 2px 0;
+    height: 45px;
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+}
+ input[type="checkbox"]:checked:after #none{
+    outline-offset: 1px;
+}
+
+.divkek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    margin: 0 2px 0 0;
+    width: 45px;
+    height: 45px;
+}
+.lool{
+    background: blue;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 15px;
+    color: white;
+    width: 400px;
+    height: 45px;
+}
+.super{
+    margin: 17px 15px 15px 15px;
+}
